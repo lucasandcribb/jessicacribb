@@ -1,0 +1,41 @@
+body {margin:0; padding:0; width:100%; min-width:1200px; font:normal 20px 'Chaparral Pro'; color:#9f757b;}
+a {text-decoration:none; color:#fff;}
+a img {border:0;}
+ul {list-style:none; padding:0; margin:0;}
+input {webkit-appearance:none;}
+p {margin:0;}
+#header {float:left; width:100%;}
+#main-wrap {float:left; width:808px;}
+.apple {font-family:'Apple Chancery';}
+.last {margin-right:0 !important;}
+
+
+/*HEADER*/
+#header {height:295px;}
+#header #hair {float:left; background:url(../images/hair.png) no-repeat; width:260px; height:292px;}
+#header #logo-text {float:left; font-size:50px; color:#000; text-align:center; margin:45px 0 0 50px; line-height:50px;}
+#header #logo-text span {font-size:40px;}
+#header #salon-logo {float:right; background:url(../images/salon-logo.png) no-repeat; width:330px; height:160px;}
+#header #nav {float:left; margin:40px 0 0;}
+#header #nav li {float:left; margin-right:20px;}
+#header #nav li:hover, #header #nav .current-menu-item, #header #nav .current-page-ancestor {background:url("../images/nav-hover.png") no-repeat center 30px}
+#header #nav li a {font:normal 20px 'Apple Chancery'; color:#000; float:left; height:90px; min-width:75px; padding:0 15px 0 13px; text-align:center;}
+
+/*TIP CONTAINER*/
+#tip-cont {float:left; width:180px; padding:15px; border:1px solid #e7bdcf; margin:25px 0 10px 35px;}
+#tip-cont .title {float:left; background:url(../images/loyalty-pattern.png) no-repeat 11px 45px; background-size:150px; font-size:25px; color:#8f6354; width:100%; text-align:center; margin-bottom:15px; height:65px;}
+#tip-cont .tip-title {float:left; width:100%; text-align:center; padding:5px 0 2px; background:#fcf3f7; margin-bottom:15px; font-size:20px;}
+#tip-cont .tip-text {float:left; font-size:14px; margin-bottom:10px;}
+
+/*FOOTER*/
+#footer {float:left; width:630px; height:30px; border:solid 1px #e7bdcf; background:#fcf5f8; margin:25px 0 0 150px; padding:10px;}
+#footer #signup-cont {/*display:none;*/ background:#f2d9e4; border:1px solid #8f6354; height:21px; padding:2px 5px 5px 10px;}
+#footer #newsletter {float:left; color:#8f6354; font-size:22px; border:1px solid #8f6354; width:185px; height:21px; 
+padding:2px 5px 5px 10px; background:url(../images/arrow.png) no-repeat 185px 7px #f2d9e4; cursor:pointer;}
+#footer #mc_signup_form {border:none; background:none;}
+#footer #site-credit {float:right; font-size:12px; color:#000; margin-top:20px;}
+
+/*HOMEPAGE*/
+#home #home-slider {float:left; width:650px; height:425px; background:url(../images/slider-frame.png) no-repeat; margin-left:150px;}
+#home .cycloneslider {margin:22px 0 0 22px;}
+#home .salon-address {float:left; width:660px; text-align:center; margin:60px 0 0 150px;}

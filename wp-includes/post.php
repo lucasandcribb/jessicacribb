@@ -164,6 +164,83 @@ function create_initial_post_types() {
 }
 add_action( 'init', 'create_initial_post_types', 0 ); // highest priority
 
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+
+	$args1 = array(
+		'labels' => array(
+			'name' => __( 'Tips' ),
+			'singular_name' => __( 'Tip' )
+		),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'tips'),
+		'supports' => array( 'title', 'editor', 'thumbnail' )
+	);
+	
+	// $args2 = array(
+	// 	'labels' => array(
+	// 		'name' => __( 'Bikes' ),
+	// 		'singular_name' => __( 'Bike' )
+	// 	),
+	// 	'public' => true,
+	// 	'has_archive' => true,
+	// 	'rewrite' => array('slug' => 'bikes'),
+	// 	'supports' => array( 'title', 'editor', 'thumbnail' )
+	// );
+	// 
+	// 
+	// $args3 = array(
+	// 	'labels' => array(
+	// 		'name' => __( 'Trails & Maps' ),
+	// 		'singular_name' => __( 'Trails & Maps' )
+	// 	),
+	// 	'public' => true,
+	// 	'has_archive' => true,
+	// 	'rewrite' => array('slug' => 'trailsandmaps'),
+	// 	'supports' => array( 'title', 'editor', 'thumbnail' )
+	// );
+	// 
+	// $args4 = array(
+	// 	'labels' => array(
+	// 		'name' => __( 'Safety Tips' ),
+	// 		'singular_name' => __( 'Safety Tip' )
+	// 	),
+	// 	'public' => true,
+	// 	'has_archive' => true,
+	// 	'rewrite' => array('slug' => 'safety-tips'),
+	// 	'supports' => array( 'title', 'editor', 'thumbnail' )
+	// );
+	// 
+	// $args5 = array(
+	// 	'labels' => array(
+	// 		'name' => __( 'Community Relations' ),
+	// 		'singular_name' => __( 'Community Relation' )
+	// 	),
+	// 	'public' => true,
+	// 	'has_archive' => true,
+	// 	'rewrite' => array('slug' => 'community-relations'),
+	// 	'supports' => array( 'title', 'editor', 'thumbnail' )
+	// );
+	
+  
+  	register_post_type( 'Tips', $args1);
+	// register_post_type( 'Bikes', $args2);
+	// register_post_type( 'Trails & Maps', $args3);
+	// register_post_type( 'Safety Tips', $args4);
+	// register_post_type( 'Community Relations', $args5);
+  
+	// register_taxonomy_for_object_type('post_tag', 'offerings');
+	
+	register_taxonomy_for_object_type('category', 'tips');
+	
+	// register_taxonomy_for_object_type('post_tag', 'page');
+	register_taxonomy_for_object_type('category', 'page');
+	
+	
+}
+add_theme_support( 'post-thumbnails', array( 'post' , 'page' ) ); // Add it for posts
+
 /**
  * Retrieve attached file path based on attachment ID.
  *
