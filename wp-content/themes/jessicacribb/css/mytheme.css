@@ -7,6 +7,7 @@ p {margin:0;}
 #header {float:left; width:100%;}
 #main-wrap {float:left; width:808px;}
 .apple {font-family:'Apple Chancery';}
+.chaparral {font:normal 16px 'Chaparral Pro';}
 .last {margin-right:0 !important;}
 
 
@@ -28,12 +29,24 @@ p {margin:0;}
 #tip-cont .tip-text {float:left; font-size:14px; margin-bottom:10px;}
 
 /*FOOTER*/
-#footer {float:left; width:630px; height:30px; border:solid 1px #e7bdcf; background:#fcf5f8; margin:25px 0 0 150px; padding:10px;}
-#footer #signup-cont {/*display:none;*/ background:#f2d9e4; border:1px solid #8f6354; height:21px; padding:2px 5px 5px 10px;}
-#footer #newsletter {float:left; color:#8f6354; font-size:22px; border:1px solid #8f6354; width:185px; height:21px; 
-padding:2px 5px 5px 10px; background:url(../images/arrow.png) no-repeat 185px 7px #f2d9e4; cursor:pointer;}
+#footer {float:left; width:730px; height:30px; border:solid 1px #e7bdcf; background:#fcf5f8; margin:50px 0 0 100px; padding:10px;}
+#footer #signup-cont {z-index:4;display:none; background:#f2d9e4; border:1px solid #8f6354; height:21px; padding:2px 5px 5px 5px; width:547px; position:absolute; margin-left:171px;}
+#footer #newsletter {z-index:5; float:left; color:#8f6354; font-size:22px; border:1px solid #8f6354; width:155px; height:21px; padding:2px 5px 5px 10px; background:url(../images/arrow.png) no-repeat 155px 7px #f2d9e4; cursor:pointer;}
+#footer #newsletter.click {background:url(../images/arrow-left.png) no-repeat 155px 7px #f2d9e4;}
+#footer #site-credit {float:right; font-size:12px; color:#000; margin-top:17px;}
+#footer #social-cont {float:left; margin:4px 0 0 120px;}
+#footer .social-link {float:left; width:22px; height:25px; background:url(../images/facebook.png) no-repeat; margin-left:40px;}
+#footer #facebook:hover {background-position: 0 -24px;}
+#footer #twitter {background:url(../images/twitter.png) no-repeat; margin-top:4px; height:19px;}
+#footer #twitter:hover {background-position: 0 -17px;}
+
+/*NEWSLETTER SIGNUP*/
 #footer #mc_signup_form {border:none; background:none;}
-#footer #site-credit {float:right; font-size:12px; color:#000; margin-top:20px;}
+#footer #mc_signup_form .form-input {float:left; border:1px solid #e7bdcf; background:#faebf2; height:18px; width:215px; padding:4px 5px 0 5px; margin-left:5px; font-size:normal 16px 'Chapparal Pro'; color:#8f6354;}
+#footer #mc_signup_submit {float:left; border:1px solid #e7bdcf; background:#8f6354; color:#eddfda; cursor:pointer; margin-left:5px;}
+#footer #mc_message {position:absolute; margin:-50px 0 0 50px; font-size:18px; width:100%;}
+#footer #mc_message .mc_error_msg {background:#e4a7c1; border:1px solid #faebf2; color:#fff; padding:4px 50px;}
+#footer #mc_message .mc_success_msg {color:#8f6354;}
 
 /*HOMEPAGE*/
 #home #home-slider {float:left; width:650px; height:425px; background:url(../images/slider-frame.png) no-repeat; margin-left:150px;}

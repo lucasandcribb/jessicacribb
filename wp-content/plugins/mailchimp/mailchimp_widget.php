@@ -151,7 +151,7 @@ function mailchimpSF_signup_form($args = array()) {
 		?>
 
 		<div class="mc_signup_submit">
-			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>" class="button" />
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="<?php echo esc_attr(get_option('mc_submit_text')); ?>" class="button chaparral" />
 		</div><!-- /mc_signup_submit -->
 		
 		<div class="updated" id="mc_message">
@@ -256,6 +256,7 @@ function mailchimp_interest_group_field($ig) {
  */
 function mailchimp_form_field($var, $num_fields) {
 	$opt = 'mc_mv_'.$var['tag'];
+	$default = $var['tag'];
 	$html = '';
 	// See if that var is set as required, or turned on (for display)
 	if ($var['req'] || get_option($opt) == 'on') {
@@ -368,7 +369,7 @@ function mailchimp_form_field($var, $num_fields) {
 			case 'number':
 			default:
 				$html .= '
-	<input type="text" size="18" value="'.esc_html($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="mc_input form-input brandon" default="Enter Your Email"/>';
+	<input type="text" size="18" value="'.esc_html($var['default']).'" name="'.esc_attr($opt).'" id="'.esc_attr($opt).'" class="mc_input form-input chaparral" default="'.$default.'"/>';
 				break;
 		}
 		if (!empty($var['helptext'])) {

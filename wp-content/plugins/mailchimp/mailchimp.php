@@ -1338,7 +1338,7 @@ function mailchimpSF_signup_submit() {
 		$msg .= '</span>';
 	}
 	else {
-		$msg = "<div class='mc_success_msg'>".esc_html(__("Thank you!", 'mailchimp_i18n'))."</div>";
+		$msg = "<div class='mc_success_msg'>".esc_html(__("You have successfully subscribed. Thank you!", 'mailchimp_i18n'))."</div>";
 	}
 	
 	// Set our global message

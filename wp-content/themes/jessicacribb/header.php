@@ -52,6 +52,9 @@
 <!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" /> -->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mytheme.js"></script>
+<meta property="og:image" og:title="Jessica Cribb | Stylist and Makeup Artist" og:url="<?php echo get_site_url(); ?>" content="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+
 
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
