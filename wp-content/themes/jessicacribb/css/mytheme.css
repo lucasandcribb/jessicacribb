@@ -52,3 +52,13 @@ p {margin:0;}
 #home #home-slider {float:left; width:650px; height:425px; background:url(../images/slider-frame.png) no-repeat; margin-left:150px;}
 #home .cycloneslider {margin:22px 0 0 22px;}
 #home .salon-address {float:left; width:660px; text-align:center; margin:60px 0 0 150px;}
+
+/*BIO*/
+#bio #photo {float:left; width:345px; height:345px; margin:25px 40px 0 35px; background:url(../images/bio-frame.png) no-repeat;}
+#bio #photo img {float:left; margin:22px 0 0 22px;}
+#bio #bio-text {float:left; width:375px; margin-top:25px;}
+#bio #bio-text p {margin-bottom:30px;}
+
+
+
+
