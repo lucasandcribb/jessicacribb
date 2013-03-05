@@ -6,43 +6,66 @@ get_header(); ?>
 
 
 	<?php query_posts(array('post_type' => 'services', 'order' => 'ASC', 'posts_per_page' => 50)); ?>
-		<?php 
-		$categories = get_categories('child_of=10&depth=1' );
+	<!-- <?php if ( have_posts() ) : ?>
+	<?php while ( have_posts() ) : the_post(); ?>
+		<div class="tip-text"><?php the_title(); ?></div>
+	<?php endwhile; ?>
+	<?php endif; ?> -->
 		
-		foreach($categories as $cat) { 
-			//$cat=array('orderby' => 'none');
-		    echo '<div class="cat-cont '.$cat->name.'"><div class="sort-by">'.$cat->name.'</div>';
-		    // $sub_cats = get_categories('parent='.$cat->term_id.'&hide_empty=0');
-		    // if($sub_cats) {
-		    //     echo '<div class="drop-list">';
-		    //     foreach($sub_cats as $sub_cat) {
-		    //     echo '<div id="'.$sub_cat->name.'" class="cat-name">'.$sub_cat->name.'</div>';
-		    //     }
-		    //     echo '</div>';
-		    echo '</div>';
-		    // }
-		}
+		<?php global $ancestor;	$childcats = get_categories('child_of=10'); ?>
+			<?php foreach ($childcats as $childcat) {
+		  		if (cat_is_ancestor_of($ancestor, $childcat->cat_ID) == false){ ?>
+				<div class="service-cont">
+			    	<div class="main-title"><?php echo $childcat->cat_name; ?></div>
+					<div id="<?php echo strtolower(str_replace(' ','-',$childcat->cat_name)); ?>" class="service-box">
+						<?php $sub_cats = get_categories('parent='.$childcat->term_id.'&hide_empty=0'); ?>
+						<?php if($sub_cats) { ?>
+							<?php foreach($sub_cats as $sub_cat) { ?>
+								<div id="<?php echo strtolower(str_replace(' ','-',$sub_cat->name)); ?>" class="sub-service-cont">
+							   		<div class="sub-service"><?php echo $sub_cat->name ?></div>
+									<?php if ( have_posts() ) : ?>
+										<?php while ( have_posts() ) : the_post(); ?>
+											<div class="service-info <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>">
+												<div class="service-title "><?php the_title(); ?></div>
+												<div class="service-price"><?php the_field('price'); ?></div>
+											</div>
+										<?php endwhile; ?>
+									<?php endif; ?>
+																		
+									<?php $sub_subs = get_categories('parent='.$sub_cat->term_id.'&hide_empty=0'); ?>
+										<?php foreach($sub_subs as $sub_sub) { ?>
+											<div id="<?php echo strtolower(str_replace(' ','-',$sub_sub->name)); ?>" class="sub-sub-cont">
+												<div class="subsub-service"><?php echo $sub_sub->name ?></div>
+												<?php if ( have_posts() ) : ?>
+													<?php while ( have_posts() ) : the_post(); ?>
+														<div class="service-info <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>">
+															<div class="service-title "><?php the_title(); ?></div>
+															<div class="service-price"><?php the_field('price'); ?></div>
+														</div>
+													<?php endwhile; ?>
+												<?php endif; ?>
+											</div>
+										<?php } ?>	
+								</div>
+							<?php }  ?>	
+						<?php } else { ?>	
+							<?php if ( have_posts() ) : ?>
+								<?php while ( have_posts() ) : the_post(); ?>
+									<div class="service-info <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>">
+										<div class="service-title "><?php the_title(); ?></div>
+										<div class="service-price"><?php the_field('price'); ?></div>
+									</div>
+								<?php endwhile; ?>
+							<?php endif; ?>
+							
+						<?php } ?>	
+					</div>
+				</div>
+			<?php $ancestor = $childcat->cat_ID; }	}	?>
+		
 
 		
-		?>
-		
-		<?php
-		global $ancestor;
-		$childcats = get_categories('child_of=10');
-		foreach ($childcats as $childcat) {
-		  if (cat_is_ancestor_of($ancestor, $childcat->cat_ID) == false){
-		    echo '<li><h2><a href="'.get_category_link($childcat->cat_ID).'">';
-		    echo $childcat->cat_name . '</a></h2>';
-		    echo '<p>'.$childcat->category_description.'</p>';
-		    echo '</li>';
-		    $ancestor = $childcat->cat_ID;
-		  }
-		}
-		?>
-		
-
-		
-		<?php 		wp_dropdown_categories(array('hide_empty' => 0, 'cat' => 10, 'name' => 'category_parent', 'orderby' => 'name', 'selected' => $category->parent, 'hierarchical' => true, 'show_option_none' => __('None'))); ?>
+		<!-- <?php 	//	wp_dropdown_categories(array('hide_empty' => 0, 'cat' => 10, 'name' => 'category_parent', 'orderby' => 'name', 'selected' => $category->parent, 'hierarchical' => true, 'show_option_none' => __('None'))); ?> -->
 		
 		
 		<!--<select name="event-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> 

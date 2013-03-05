@@ -5,7 +5,7 @@ ul {list-style:none; padding:0; margin:0;}
 input {webkit-appearance:none;}
 p {margin:0;}
 #header {float:left; width:100%;}
-#main-wrap {float:left; width:808px;}
+#main-wrap {float:left; width:808px; margin-top:30px;}
 .apple {font-family:'Apple Chancery';}
 .chaparral {font:normal 16px 'Chaparral Pro';}
 .last {margin-right:0 !important;}
@@ -58,6 +58,15 @@ p {margin:0;}
 #bio #photo img {float:left; margin:22px 0 0 22px;}
 #bio #bio-text {float:left; width:375px; margin-top:25px;}
 #bio #bio-text p {margin-bottom:20px;}
+
+/*SERVICES*/
+#services .service-cont {float:left; width:355px; margin:0 30px 20px 0;}
+#services .main-title {float:left; width:100%; text-align:center; background:url(../images/services-pattern.png) no-repeat 0 20px; color:#9f757b; font-size:32px; text-decoration:underline;}
+#services .service-box {float:left; border:2px solid #e5c0d0; width:320px; padding:15px 10px 15px 20px; color:#000;}
+#services .sub-service-cont {float:left; margin-bottom:25px; width:100%;}
+#services .sub-service {float:left; width:100%; text-transform:uppercase; font-size:18px; margin-bottom:8px;}
+#services .subsub-service {float:left; width:100%; margin-left:20px;}
+#services .service-info {float:left; width:100%;}
 
 
 

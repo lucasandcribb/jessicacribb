@@ -13,6 +13,7 @@ $(document).ready(function() {
 			$('#signup-cont').animate({width: 'toggle'});
 		};
 	});
+	showServices();
 
 });
 
@@ -69,6 +70,33 @@ function centerLogotext(item,iWidth,iHeight){
    if(windowWidth < 1200) {
 		$(item).css({'margin-left': 85});
 	}
+}
+
+function showServices() {
+	$('.sub-service-cont').each(function() {
+		var id = $(this).attr('id');
+		$(this).children('.service-info').each(function() {
+			if (!$(this).hasClass(id)) {
+				$(this).remove();
+			}		
+		});
+	});
+	$('.service-box').each(function() {
+		var id = $(this).attr('id');
+		$(this).children('.service-info').each(function() {
+			if (!$(this).hasClass(id)) {
+				$(this).remove();
+			}		
+		});
+	});
+	$('.sub-sub-cont').each(function() {
+		var id = $(this).attr('id');
+		$(this).children('.service-info').each(function() {
+			if (!$(this).hasClass(id)) {
+				$(this).remove();
+			}		
+		});
+	});
 }
 
 function showNewsletter() {
