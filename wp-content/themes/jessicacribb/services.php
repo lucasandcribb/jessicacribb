@@ -26,13 +26,14 @@ get_header(); ?>
 									<?php if ( have_posts() ) : ?>
 										<?php while ( have_posts() ) : the_post(); ?>
 											<div class="service-info <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>">
+												<span>.......................................................................</span>
 												<div class="service-title "><?php the_title(); ?></div>
 												<div class="service-price"><?php the_field('price'); ?></div>
 											</div>
 										<?php endwhile; ?>
 									<?php endif; ?>
 																		
-									<?php $sub_subs = get_categories('parent='.$sub_cat->term_id.'&hide_empty=0'); ?>
+									<!-- <?php $sub_subs = get_categories('parent='.$sub_cat->term_id.'&hide_empty=0'); ?>
 										<?php foreach($sub_subs as $sub_sub) { ?>
 											<div id="<?php echo strtolower(str_replace(' ','-',$sub_sub->name)); ?>" class="sub-sub-cont">
 												<div class="subsub-service"><?php echo $sub_sub->name ?></div>
@@ -45,13 +46,14 @@ get_header(); ?>
 													<?php endwhile; ?>
 												<?php endif; ?>
 											</div>
-										<?php } ?>	
+										<?php } ?>	 -->
 								</div>
 							<?php }  ?>	
 						<?php } else { ?>	
 							<?php if ( have_posts() ) : ?>
 								<?php while ( have_posts() ) : the_post(); ?>
-									<div class="service-info <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>">
+									<div class="service-info <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?> nosub">
+										<span>.......................................................................</span>
 										<div class="service-title "><?php the_title(); ?></div>
 										<div class="service-price"><?php the_field('price'); ?></div>
 									</div>

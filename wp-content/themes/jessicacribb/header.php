@@ -87,45 +87,21 @@
 		<?php if (!is_home()) : ?>
 		<div id="tip-cont">
 			<div class="title apple">Tip of the Day</div>
-			<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 2, 'cat' => 4 )); ?>
-				<?php if ( have_posts() ) : ?>
-					<div class="tip-title">Skin Care</div>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="tip-text"><?php the_content(); ?></div>
-				<?php endwhile; ?>
-				<?php endif; ?>
 				
-			<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 2, 'cat' => 5 )); ?>
-				<?php if ( have_posts() ) : ?>
-					<div class="tip-title">Hair Care</div>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="tip-text"><?php the_content(); ?></div>
-				<?php endwhile; ?>
-				<?php endif; ?>
-					
-			<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 2, 'cat' => 6 )); ?>
-				<?php if ( have_posts() ) : ?>
-					<div class="tip-title">Styling</div>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="tip-text"><?php the_content(); ?></div>
-				<?php endwhile; ?>
-				<?php endif; ?>
-			
-			<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 2, 'cat' => 7 )); ?>
-				<?php if ( have_posts() ) : ?>
-					<div class="tip-title">Coloring</div>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="tip-text"><?php the_content(); ?></div>
-				<?php endwhile; ?>
-				<?php endif; ?>
-					
-			<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 2, 'cat' => 8 )); ?>
-				<?php if ( have_posts() ) : ?>
-					<div class="tip-title">Makeup</div>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="tip-text"><?php the_content(); ?></div>
-				<?php endwhile; wp_reset_query(); ?>
-				<?php endif;  ?>
+			<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 100)); ?>	
+				<?php global $ancestor;	$childcats = get_categories('child_of=9'); ?>
+					<?php foreach ($childcats as $childcat) {
+				  		if (cat_is_ancestor_of($ancestor, $childcat->cat_ID) == false){ ?>
+						<div id="<?php echo strtolower(str_replace(' ','-',$childcat->cat_name)); ?>" class="single-tip-cont">
+					    	<div class="tip-title"><?php echo $childcat->cat_name; ?></div>
+							<?php if ( have_posts() ) : ?>
+								
+							<?php while ( have_posts() ) : the_post(); ?>
+								<div class="tip-text <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>"><?php the_content(); ?></div>
+							<?php endwhile; ?>
+							<?php endif;  ?>
+						</div>							
+					<?php $ancestor = $childcat->cat_ID; }	}	?>
 			
 		</div>
 		<?php endif; ?>

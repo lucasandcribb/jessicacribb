@@ -14,6 +14,7 @@ $(document).ready(function() {
 		};
 	});
 	showServices();
+	$('.single-tip-cont .tip-text').hide().slice(0, 4).show();
 
 });
 
@@ -92,6 +93,14 @@ function showServices() {
 	$('.sub-sub-cont').each(function() {
 		var id = $(this).attr('id');
 		$(this).children('.service-info').each(function() {
+			if (!$(this).hasClass(id)) {
+				$(this).remove();
+			}		
+		});
+	});
+	$('.single-tip-cont').each(function() {
+		var id = $(this).attr('id');
+		$(this).children('.tip-text').each(function() {
 			if (!$(this).hasClass(id)) {
 				$(this).remove();
 			}		
