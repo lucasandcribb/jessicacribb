@@ -101,7 +101,7 @@
 							<?php endwhile; ?>
 							<?php endif;  ?>
 						</div>							
-					<?php $ancestor = $childcat->cat_ID; }	}	?>
+					<?php $ancestor = $childcat->cat_ID; }	} wp_reset_query();	?>
 			
 		</div>
 		<?php endif; ?>
