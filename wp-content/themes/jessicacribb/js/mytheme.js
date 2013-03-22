@@ -1,8 +1,9 @@
 $(document).ready(function() {
-	centerMainwrap('#main-wrap',808);
+	//centerMainwrap('#main-wrap',808);
 	centerMainwrap('#footer',730);
 	centerMainwrap('#nav',928);
-	centerLogotext('#logo-text',433);
+	centerMainwrap('#home-slider',650);
+	centerLogotext('#logo-text',379);
 	// centerItem('#page',1000);
 	$('#nav li:last').addClass('last');
 	setInputFieldFunctions();
@@ -19,10 +20,11 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-	centerMainwrap('#main-wrap',808);
+	//centerMainwrap('#main-wrap',808);
 	centerMainwrap('#footer',730);
 	centerMainwrap('#nav',928);
-	centerLogotext('#logo-text',433);
+	centerMainwrap('#home-slider',650);
+	centerLogotext('#logo-text',379);
 
 });
 
@@ -57,19 +59,20 @@ function centerItem(item,iWidth,iHeight){
 function centerMainwrap(item,iWidth,iHeight){  
    windowWidth = $(window).width();
    var w = windowWidth - iWidth; 
-   $(item).css({'margin-left': (w/2) - 130});
-   if(windowWidth < 1200) {
+   $(item).css({'margin-left': (w/2) - 180});
+   if(windowWidth < 1220) {
 		$(item).css({'margin-left': 0});
-		$('#footer').css({'margin-left': 35});
+		$('#footer').css({'margin-left': 25});
+		$('#home-slider').css({'margin-left': 75});
 	}   
 }
 
 function centerLogotext(item,iWidth,iHeight){  
    windowWidth = $(window).width();
    var w = windowWidth - iWidth; 
-   $(item).css({'margin-left': (w/2) - 237});
-   if(windowWidth < 1200) {
-		$(item).css({'margin-left': 85});
+   $(item).css({'margin-left': (w/2) - 200});
+   if(windowWidth < 1220) {
+		$(item).css({'margin-left': 220});
 	}
 }
 

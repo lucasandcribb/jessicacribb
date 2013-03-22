@@ -13,23 +13,23 @@ p {margin:0;}
 
 /*HEADER*/
 #header {height:295px;}
-#header #hair {float:left; background:url(../images/hair.png) no-repeat; width:260px; height:292px;}
-#header #logo-text {float:left; font-size:50px; color:#000; text-align:center; margin:45px 0 0 50px; line-height:50px;}
-#header #logo-text span {font-size:40px;}
-#header #salon-logo {float:right; background:url(../images/salon-logo.png) no-repeat; width:330px; height:160px;}
+#header #hair {float:left; background:url(../images/hair.png) no-repeat; width:200px; height:265px; background-size:235px;}
+#header #logo-text {float:left; font-size:48px; color:#000; text-align:center; margin:45px 0 0 0px; line-height:50px;}
+#header #logo-text span {font-size:35px;}
+#header #salon-logo {float:right; background:url(../images/salon-logo.png) no-repeat; background-size:285px; width:285px; height:145px;}
 #header #nav {float:left; margin:40px 0 0;}
 #header #nav li {float:left; margin-right:20px;}
 #header #nav li:hover, #header #nav .current-menu-item, #header #nav .current-page-ancestor {background:url("../images/nav-hover.png") no-repeat center 30px}
 #header #nav li a {font:normal 20px 'Apple Chancery'; color:#000; float:left; height:90px; min-width:75px; padding:0 15px 0 13px; text-align:center;}
 
 /*TIP CONTAINER*/
-#tip-cont {float:left; width:180px; padding:15px; border:1px solid #e7bdcf; margin:25px 0 10px 35px;}
+#tip-cont {float:left; width:180px; padding:15px; border:1px solid #e7bdcf; margin:25px 0 10px 20px;}
 #tip-cont .title {float:left; background:url(../images/loyalty-pattern.png) no-repeat 11px 45px; background-size:150px; font-size:25px; color:#8f6354; width:100%; text-align:center; margin-bottom:15px; height:65px;}
 #tip-cont .tip-title {float:left; width:100%; text-align:center; padding:5px 0 2px; background:#fcf3f7; margin-bottom:15px; font-size:20px;}
 #tip-cont .tip-text {float:left; font-size:14px; margin-bottom:10px;}
 
 /*FOOTER*/
-#footer {float:left; width:730px; height:30px; border:solid 1px #e7bdcf; background:#fcf5f8; margin:50px 0 0 100px; padding:10px;}
+#footer {float:left; width:730px; height:30px; border:solid 1px #e7bdcf; background:#fcf5f8; margin:50px 0 0 45px; padding:10px;}
 #footer #signup-cont {z-index:4;display:none; background:#f2d9e4; border:1px solid #8f6354; height:21px; padding:2px 5px 5px 5px; width:547px; position:absolute; margin-left:171px;}
 #footer #newsletter {z-index:5; float:left; color:#8f6354; font-size:22px; border:1px solid #8f6354; width:155px; height:21px; padding:2px 5px 5px 10px; background:url(../images/arrow.png) no-repeat 155px 7px #f2d9e4; cursor:pointer;}
 #footer #newsletter.click {background:url(../images/arrow-left.png) no-repeat 155px 7px #f2d9e4;}
@@ -72,5 +72,7 @@ p {margin:0;}
 #services .service-title {position:absolute; background:#fff;}
 #services .service-price {float:right; margin-top:-20px; background:#fff;}
 
-
-
+/*RESERVATIONS*/
+#form-cont {float:left; padding:25px 115px; width:520px; background:#fcf8fa; border:1px solid #f3dee7;}
+.form-title {color:#8f6354; font-size:38px; float:left; width:100%; text-align:center;}
+input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; color:#8f6354 !important; float:left; padding:5px 10px; width:180px; height:20px;}
