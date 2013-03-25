@@ -11,11 +11,11 @@ get_header(); ?>
 		<div class="tip-text"><?php the_title(); ?></div>
 	<?php endwhile; ?>
 	<?php endif; ?> -->
-		
+		<?php $count = 1; ?>
 		<?php global $ancestor;	$childcats = get_categories('child_of=10'); ?>
 			<?php foreach ($childcats as $childcat) {
 		  		if (cat_is_ancestor_of($ancestor, $childcat->cat_ID) == false){ ?>
-				<div class="service-cont">
+				<div class="service-cont cont-<?php echo $count;?>">
 			    	<div class="main-title"><?php echo $childcat->cat_name; ?></div>
 					<div id="<?php echo strtolower(str_replace(' ','-',$childcat->cat_name)); ?>" class="service-box">
 						<?php $sub_cats = get_categories('parent='.$childcat->term_id.'&hide_empty=0'); ?>
@@ -63,6 +63,7 @@ get_header(); ?>
 						<?php } ?>	
 					</div>
 				</div>
+				<?php $count++; ?>
 			<?php $ancestor = $childcat->cat_ID; }	}	?>
 		
 

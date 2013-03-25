@@ -25,6 +25,8 @@
 		</div>
 <?php wp_footer(); ?>
 
+<div id="overlay-shade"></div>
+
 </body>
 </html>
 

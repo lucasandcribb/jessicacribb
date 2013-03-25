@@ -78,32 +78,40 @@
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
 		<div id="header">
 			<a id="hair" href="/"></a>
-			<a id="logo-text" class="apple" href="/">Jessica Cribb<br/><span>Stylist and Makeup Artist</span></a>
+			<div id="logo-cont">
+				<a id="logo-text" class="apple" href="/">Jessica Cribb<br/><span>Stylist and Makeup Artist</span></a>
+			</div>
 			<a id="salon-logo" href="#" target="_blank"></a>
 			<div id="nav">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 		</div>
-		<?php if (!is_home()) : ?>
-		<div id="tip-cont">
-			<div class="title apple">Tip of the Day</div>
+		<?php if (!is_single() ) : ?>
+			<div id="tip-cont">
+
+				<div class="title apple">Tip of the Day</div>
 				
-			<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 100)); ?>	
+				<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 100)); ?>	
 				<?php global $ancestor;	$childcats = get_categories('child_of=9'); ?>
 					<?php foreach ($childcats as $childcat) {
 				  		if (cat_is_ancestor_of($ancestor, $childcat->cat_ID) == false){ ?>
 						<div id="<?php echo strtolower(str_replace(' ','-',$childcat->cat_name)); ?>" class="single-tip-cont">
 					    	<div class="tip-title"><?php echo $childcat->cat_name; ?></div>
-							<?php if ( have_posts() ) : ?>
-								
-							<?php while ( have_posts() ) : the_post(); ?>
-								<div class="tip-text <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>"><?php the_content(); ?></div>
-							<?php endwhile; ?>
+							<?php if ( have_posts() ) : ?>	
+								<?php while ( have_posts() ) : the_post(); ?>
+									<div class="tip-text <?php foreach((get_the_category()) as $category) {echo strtolower(str_replace(' ','-',$category->cat_name));} ?>">
+										<?php the_content(); ?>
+									</div>
+								<?php endwhile; ?>
 							<?php endif;  ?>
 						</div>							
 					<?php $ancestor = $childcat->cat_ID; }	} wp_reset_query();	?>
 			
-		</div>
+			</div>
+		<?php else : ?>
+			<div id="tip-cont">
+				<?php get_sidebar(); ?>
+			</div>
 		<?php endif; ?>
 		<div id="main-wrap">
 

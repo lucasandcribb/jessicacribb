@@ -188,6 +188,17 @@ function create_post_type() {
 		'rewrite' => array('slug' => 'services'),
 		'supports' => array( 'title', 'editor', 'thumbnail' )
 	);
+
+	$args3 = array(
+		'labels' => array(
+			'name' => __( 'Credits' ),
+			'singular_name' => __( 'credits' )
+		),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'credits'),
+		'supports' => array( 'title', 'editor', 'thumbnail' )
+	);
 	// 
 	// 
 	// $args3 = array(
@@ -226,6 +237,7 @@ function create_post_type() {
   
   	register_post_type( 'Tips', $args1);
 	register_post_type( 'Services', $args2);
+	register_post_type( 'Credits', $args3);
 	// register_post_type( 'Trails & Maps', $args3);
 	// register_post_type( 'Safety Tips', $args4);
 	// register_post_type( 'Community Relations', $args5);
@@ -234,7 +246,7 @@ function create_post_type() {
 	
 	register_taxonomy_for_object_type('category', 'tips');
 	register_taxonomy_for_object_type('category', 'services');
-	
+	register_taxonomy_for_object_type('category', 'credits');
 	// register_taxonomy_for_object_type('post_tag', 'page');
 	register_taxonomy_for_object_type('category', 'page');
 	

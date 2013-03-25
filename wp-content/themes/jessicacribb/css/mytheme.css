@@ -5,20 +5,22 @@ ul {list-style:none; padding:0; margin:0;}
 input {webkit-appearance:none;}
 p {margin:0;}
 #header {float:left; width:100%;}
-#main-wrap {float:left; width:808px; margin-top:30px;}
+#main-wrap {float:left; width:800px; margin-top:30px;}
 .apple {font-family:'Apple Chancery';}
 .chaparral {font:normal 16px 'Chaparral Pro';}
 .last {margin-right:0 !important;}
-
+#overlay-shade {position:fixed; top:0px; left:0px; width:100%; height:100%; background:#f2d9e4; opacity:0.7; display:none;}
 
 /*HEADER*/
 #header {height:295px;}
 #header #hair {float:left; background:url(../images/hair.png) no-repeat; width:200px; height:265px; background-size:235px;}
-#header #logo-text {float:left; font-size:48px; color:#000; text-align:center; margin:45px 0 0 0px; line-height:50px;}
-#header #logo-text span {font-size:35px;}
+#header #logo-cont {position:absolute; top:25px; left:0px; width:100%; height:105px; text-align:center; min-width:1100px;}
+#header #logo-cont #logo-text {position:relative; margin:auto; font-size:48px; color:#000; text-align:center; line-height:50px;}
+#header #logo-cont #logo-text span {font-size:35px;}
 #header #salon-logo {float:right; background:url(../images/salon-logo.png) no-repeat; background-size:285px; width:285px; height:145px;}
-#header #nav {float:left; margin:40px 0 0;}
-#header #nav li {float:left; margin-right:20px;}
+#header #nav {position:absolute; left:0px; top:200px; margin:0px; width:100%; min-width:1100px;}
+#header .menu-main-nav-container {width:810px; height:40px; position:relative; margin:auto;}
+#header #nav li {float:left;}
 #header #nav li:hover, #header #nav .current-menu-item, #header #nav .current-page-ancestor {background:url("../images/nav-hover.png") no-repeat center 30px}
 #header #nav li a {font:normal 20px 'Apple Chancery'; color:#000; float:left; height:90px; min-width:75px; padding:0 15px 0 13px; text-align:center;}
 
@@ -42,7 +44,8 @@ p {margin:0;}
 
 /*NEWSLETTER SIGNUP*/
 #footer #mc_signup_form {border:none; background:none;}
-#footer #mc_signup_form .form-input {float:left; border:1px solid #e7bdcf; background:#faebf2; height:18px; width:215px; padding:4px 5px 0 5px; margin-left:5px; font-size:normal 16px 'Chapparal Pro'; color:#8f6354;}
+#footer #mc_signup_form .form-input {float:left; border:1px solid #e7bdcf; background:#faebf2; height:18px; width:215px; padding:4px 5px 0 5px; 
+	margin-left:5px; font-size:normal 16px 'Chapparal Pro'; color:#8f6354; margin-top:0px;}
 #footer #mc_signup_submit {float:left; border:1px solid #e7bdcf; background:#8f6354; color:#eddfda; cursor:pointer; margin-left:5px;}
 #footer #mc_message {position:absolute; margin:-50px 0 0 50px; font-size:18px; width:100%;}
 #footer #mc_message .mc_error_msg {background:#e4a7c1; border:1px solid #faebf2; color:#fff; padding:4px 50px;}
@@ -60,7 +63,8 @@ p {margin:0;}
 #bio #bio-text p {margin-bottom:20px;}
 
 /*SERVICES*/
-#services .service-cont {float:left; width:355px; margin:0 30px 20px 0;}
+#services #main-wrap {width:775px; padding-left:25px;}
+#services .service-cont {float:left; width:355px; margin:0 25px 20px 0;}
 #services .main-title {float:left; width:100%; text-align:center; background:url(../images/services-pattern.png) no-repeat 0 20px; color:#9f757b; font-size:32px; text-decoration:underline;}
 #services .service-box {float:left; border:2px solid #e5c0d0; width:320px; padding:15px 10px 15px 20px; color:#000;}
 #services .sub-service-cont {float:left; margin-bottom:25px; width:100%;}
@@ -70,9 +74,116 @@ p {margin:0;}
 #services .service-info.nosub {width:100%; margin-left:0;}
 #services .service-info span {float:left; width:100%; height:20px;}
 #services .service-title {position:absolute; background:#fff;}
-#services .service-price {float:right; margin-top:-20px; background:#fff;}
+#services .service-price {float:right; margin-top:-20px; background:#fff; padding-left:2px;}
 
 /*RESERVATIONS*/
-#form-cont {float:left; padding:25px 115px; width:520px; background:#fcf8fa; border:1px solid #f3dee7;}
-.form-title {color:#8f6354; font-size:38px; float:left; width:100%; text-align:center;}
-input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; color:#8f6354 !important; float:left; padding:5px 10px; width:180px; height:20px;}
+#form-cont {float:left; padding:25px 125px; width:500px; background:#fcf8fa; border:1px solid #f3dee7; margin-left:28px;}
+#form-cont div {position:relative; float:left;}
+.form-title {color:#8f6354; font-size:36px; float:left; width:100%; text-align:center;}
+input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; color:#8f6354 !important; float:left; padding:10px; width:180px; 
+	height:20px; margin-top:25px;}
+#form-cont textarea {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; color:#8f6354 !important; float:left; padding:10px; 
+	width:480px; height:100px; margin-top:50px; }
+#form-cont .reserv-left {width:300px;}
+#form-cont .reserv-right {width:200px;}
+#form-cont .reserv-field-cont {margin-top:25px; width:201px; border-right:1px solid #e7bdcf; overflow:hidden; background:#faebf2;} 
+#form-cont .reserv-field-cont .wpcf7-select {width:225px; height:42px; border:1px solid #e7bdcf; 
+	padding:5px; padding-top:10px; font-size:14px; color:#8f6354 !important; background:url(../images/arrow-down.png) no-repeat; background-position:175px 15px;}
+#form-cont .reserv-field-cont .wpcf7-select option {width:192px;}
+#form-cont .reserv-submit {position:relative; float:right; width:150px; margin-top:25px; }
+#form-cont .reserv-submit input {width:150px; height:30px; border:1px solid #faebf2; background:#8f6354; color:#faebf2; font-size:22px; 
+	font-family:'Chaparral Pro';cursor:pointer;}
+#form-cont div.wpcf7-validation-errors {border:none; text-align:center; margin-top:0px; margin-bottom:0px;}
+#form-cont span.wpcf7-not-valid-tip {width:198px; top:-10px; left:-203px; background:#e4a7c1; border:1px solid #faebf2; color:#faebf2; text-align:center;}
+
+
+/*GALLERY*/
+.gallery-frame {position:relative; margin:auto; width:645px; height:419px; background:url(../images/slider-frame.png) no-repeat; border:1px solid #e7bdcf;
+	margin-top:65px;}
+#banda-gallery, #makeup-gallery {display:none;}
+#hair-gallery {display:block;}
+#gallery .cycloneslider {position:relative; float:left; margin-left:22px; margin-top:22px;}
+#gallery .cycloneslider .cycloneslider-prev, #gallery .cycloneslider .cycloneslider-prev {display:block; opacity:0.8;}
+.gallery-nav {cursor:pointer;}
+#gallery #gallery-titles {width:648px; position:relative; float:left; height:65px; margin-left:80px;}
+
+#gallery #gallery-titles .gallery-title-left {position:relative; float:left; font-size:24px; margin-top:35px;}
+#gallery #gallery-titles .gallery-title-left div, #gallery #gallery-titles .gallery-title-left img {position:relative; float:left; color:#9F757B;}
+#gallery #gallery-titles .gallery-title-left img {margin-right:10px; margin-top:2px;}
+
+#gallery #gallery-titles .gallery-title-center {position:relative; margin:auto; font-size:36px; width:250px; text-align:center;}
+#gallery #gallery-titles .gallery-title-center div {width:250px; text-align:center; color:#9F757B;}
+
+#gallery #gallery-titles .gallery-title-right {position:relative;float:right; font-size:22px; margin-top:-8px;}
+#gallery #gallery-titles .gallery-title-right div, #gallery #gallery-titles .gallery-title-right img {position:relative; float:right; color:#9F757B;}
+#gallery #gallery-titles .gallery-title-right img {margin-left:10px; margin-top:2px;}
+
+
+/*CONTACT*/
+#contact article {position:relative; float:left;}
+#contact-left, #contact-right {position:relative; float:left;}
+#contact-right {width:450px; margin-right:25px;}
+#contact-left {width:300px; margin-left:25px;}
+#contact-left div {position:relative; float:left;}
+#contact .wpcf7 {width:290px; height:355px; margin-top:50px; background:#FCF5F8; border:1px solid #faebf2;}
+#contact .wpcf7 input {margin-left:40px; width:190px;}
+#contact .wpcf7 textarea {width:190px; padding:10px; margin-left:40px; height:80px; background: none repeat scroll 0 0 #FAEBF2; border: 1px solid #E7BDCF; margin-top:25px;
+	font-size: 14px; color: #8F6354 !important; font-family:"Lucida Grande";}
+
+#contact .wpcf7 input.wpcf7-submit{margin-left:40px; position:relative; float:right; width:150px; margin-top:25px; width:150px; height:30px; 
+	border:1px solid #faebf2; background:#8f6354; color:#faebf2; font-size:22px; font-family:'Chaparral Pro';cursor:pointer; float:left;}
+#map_div {width:390px; height:400px; float:right; padding:25px; border: 1px solid #FAEBF2;}
+#contact .entry-meta, #contact .entry-header {display:none;}
+#credits {width:100%; text-align:center; margin-top:20px; position:relative; float:right;}
+#credits .credits-title {font-size:16px; font-weight:bold;}
+#credits .credit-title, #credits .credit-website {font-size:14px;}
+#credits .credit-website {margin-bottom:10px;}
+
+/*LOYALTY & REFERRAL*/
+#loyalty-referal #lr-left {position:relative; float:left; width:350px; margin-left:25px;}
+#loyalty-referal #lr-right {position:relative; float:right; width:350px; margin-right:25px;}
+#loyalty-referal #lr-left div, #loyalty-referal #lr-right div {position:relative; float:left;}
+#loyalty-referal .lr-title {width:100%; height:50px; font-size:40px; font-family:'Apple Chancery'; text-align:center; margin-bottom:25px;}
+#loyalty-referal .lr-cont {width:350px; height:500px; border:1px solid #FAEBF2;}
+.lr-content {width:320px; height:150px; padding:15px; text-align:center;}
+.lr-links {width:255px; height:270px; background:url(../images/card-border.png) no-repeat; margin-left:48px;}
+.card {width:220px; height:75px; border:1px solid #FAEBF2; background:#fcf5f8; text-align:center; padding-left:15px; padding-right:15px;
+	font-size:30px; color:#8f6354;}
+.print-card {margin-top:50px;}
+.share-card {margin-top:10px; cursor:pointer;}
+
+.share-overlay {position:absolute; width:600px; height:450px; border:2px solid #e5c0d0; background:#fff; z-index:1000; display:none; 
+	margin-top:20px; margin-left:50px; padding-left:100px;}
+.overlay-title {position:relative; float:left; width:500px; text-align:center; margin-top:20px; margin-bottom:20px; font-size:30px;}
+.close {position:absolute; top:10px; right:10px; width:20px; height:20px; cursor:pointer;}
+.share-overlay input {width:180px; margin-right:98px;}
+.share-overlay textarea {width:480px; height:100px; padding:10px; border:1px solid #e5c0d0; background:#FAEBF2; margin-top:25px;
+	font-size:14px; color:#8f6354 !important; font-family:"Lucida Grande";}
+.share-overlay input.wpcf7-submit {width:150px; height:30px; border:1px solid #faebf2; background:#8f6354; color:#faebf2; font-size:22px; 
+	font-family:'Chaparral Pro';cursor:pointer; margin-top:20px; float:right;}
+.share-overlay .wpcf7-mail-sent-ok {border:none;}
+
+
+/*BLOG*/
+.single-post article, #nav-single {padding-left:25px;}
+article a, .nav-previous a, .nav-next a {color:#8F6354;}
+article a:hover, .nav-previous a:hover, .nav-next a:hover {color:#f2a6c7;}
+#secondary, #secondary a {color:#8F6354;}
+#secondary a:hover {color:#f2a6c7;}
+.single-post .entry-meta {margin-bottom:20px; }
+.single-post .entry-meta a {color:#f2a6c7;}
+.single-post .entry-meta {margin-top:20px;}
+#tip-cont a {color:#8F6354;}
+.widget-title {background:#fcf3f7; padding:5px;}
+.widget-area .assistive-text {display:none;}
+#searchform {width:200px;}
+.widget-area #searchform #s {width:150px; height:10px; background: none repeat scroll 0 0 #FAEBF2; border: 1px solid #E7BDCF;color: #8F6354 !important;
+    float:left; font-size:12px; margin-top:0px; padding:5px; }
+.widget-area #searchform #searchsubmit {width:100px; height:20px; border:1px solid #faebf2; background:#8f6354; color:#faebf2; font-size:14px; 
+	font-family:'Chaparral Pro'; margin-top:5px;}
+
+
+
+
+
+
