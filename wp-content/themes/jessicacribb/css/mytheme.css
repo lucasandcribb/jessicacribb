@@ -18,8 +18,8 @@ p {margin:0;}
 #header #logo-cont #logo-text {position:relative; margin:auto; font-size:48px; color:#000; text-align:center; line-height:50px;}
 #header #logo-cont #logo-text span {font-size:35px;}
 #header #salon-logo {float:right; background:url(../images/salon-logo.png) no-repeat; background-size:285px; width:285px; height:145px;}
-#header #nav {position:absolute; left:0px; top:200px; margin:0px; width:100%; min-width:1100px;}
-#header .menu-main-nav-container {width:810px; height:40px; position:relative; margin:auto;}
+#header #nav {position:absolute; left:0px; top:200px; margin:0px; width:100%; min-width:1200px;}
+#header .menu-main-nav-container {width:810px; height:40px; position:relative; margin:auto; padding-top:5px; border-top:1px solid #FAEBF2; border-bottom:1px solid #FAEBF2;}
 #header #nav li {float:left;}
 #header #nav li:hover, #header #nav .current-menu-item, #header #nav .current-page-ancestor {background:url("../images/nav-hover.png") no-repeat center 30px}
 #header #nav li a {font:normal 20px 'Apple Chancery'; color:#000; float:left; height:90px; min-width:75px; padding:0 15px 0 13px; text-align:center;}
