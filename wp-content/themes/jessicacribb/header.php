@@ -86,9 +86,13 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 		</div>
-		<?php if (!is_single() ) : ?>
-			<div id="tip-cont">
 
+		<?php if (is_single() || is_archive()) : ?>
+			<div id="tip-cont">
+				<?php get_sidebar(); ?>
+			</div>
+		<?php else : ?>
+			<div id="tip-cont">
 				<div class="title apple">Tip of the Day</div>
 				
 				<?php query_posts(array('post_type' => 'tips', 'order' => 'ASC', 'posts_per_page' => 100)); ?>	
@@ -106,11 +110,6 @@
 							<?php endif;  ?>
 						</div>							
 					<?php $ancestor = $childcat->cat_ID; }	} wp_reset_query();	?>
-			
-			</div>
-		<?php else : ?>
-			<div id="tip-cont">
-				<?php get_sidebar(); ?>
 			</div>
 		<?php endif; ?>
 		<div id="main-wrap">

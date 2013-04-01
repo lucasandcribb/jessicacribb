@@ -172,10 +172,13 @@ input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; 
 .single-post article, #nav-single {padding-left:25px;}
 article a, .nav-previous a, .nav-next a {color:#8F6354;}
 article a:hover, .nav-previous a:hover, .nav-next a:hover {color:#f2a6c7;}
+.blog .entry-meta a {color:#f2a6c7;}
+.blog .entry-meta a:hover {color:#8F6354;}
 #secondary, #secondary a {color:#8F6354;}
 #secondary a:hover {color:#f2a6c7;}
 .single-post .entry-meta {margin-bottom:20px; }
 .single-post .entry-meta a {color:#f2a6c7;}
+.single-post .entry-meta a:hover {color:#8F6354;}
 .single-post .entry-meta {margin-top:20px;}
 #tip-cont a {color:#8F6354;}
 .widget-title {background:#fcf3f7; padding:5px;}
@@ -185,7 +188,7 @@ article a:hover, .nav-previous a:hover, .nav-next a:hover {color:#f2a6c7;}
     float:left; font-size:12px; margin-top:0px; padding:5px; }
 .widget-area #searchform #searchsubmit {width:100px; height:20px; border:1px solid #faebf2; background:#8f6354; color:#faebf2; font-size:14px; 
 	font-family:'Chaparral Pro'; margin-top:5px;}
-
+.archive .entry-content #searchform .assistive-text {display:none;}
 
 
 
