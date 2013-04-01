@@ -79,7 +79,7 @@ p {margin:0;}
 /*RESERVATIONS*/
 #form-cont {float:left; padding:25px 125px; width:500px; background:#fcf8fa; border:1px solid #f3dee7; margin-left:28px;}
 #form-cont div {position:relative; float:left;}
-.form-title {color:#8f6354; font-size:36px; float:left; width:100%; text-align:center;}
+#reservations .form-title {color:#8f6354; font-size:35px; float:left; width:100%; text-align:center;}
 input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; color:#8f6354 !important; float:left; padding:10px; width:180px; 
 	height:20px; margin-top:25px;}
 #form-cont textarea {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; color:#8f6354 !important; float:left; padding:10px; 
