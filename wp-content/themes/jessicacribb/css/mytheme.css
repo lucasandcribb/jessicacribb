@@ -52,9 +52,9 @@ p {margin:0;}
 #footer #mc_message .mc_success_msg {color:#8f6354;}
 
 /*HOMEPAGE*/
-#home #home-slider {float:left; width:650px; height:425px; background:url(../images/slider-frame.png) no-repeat; margin-left:90px;}
+#home #home-slider {float:left; width:650px; height:425px; background:url(../images/slider-frame.png) no-repeat; margin-left:75px;}
 #home .cycloneslider {margin:22px 0 0 22px;}
-#home .salon-address {float:left; width:660px; text-align:center; margin:60px 0 0 90px;}
+#home .salon-address {float:left; width:660px; text-align:center; margin:60px 0 0 75px;}
 
 /*BIO*/
 #bio #photo {float:left; width:345px; height:345px; margin:25px 40px 0 35px; background:url(../images/bio-frame.png) no-repeat;}

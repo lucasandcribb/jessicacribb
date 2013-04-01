@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	centerMainwrap('#main-wrap',808);
 	centerMainwrap('#footer',750);
-	centerMainwrap('#home-slider',650);
+	// centerMainwrap('#home-slider',650);
 	$('#nav li:last').addClass('last');
 	setInputFieldFunctions();
 	$('#mc-indicates-required').remove();
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 	centerMainwrap('#footer',750);
-	centerMainwrap('#home-slider',650);
+	// centerMainwrap('#home-slider',650);
 	centerMainwrap('#main-wrap',808);
 });
 
