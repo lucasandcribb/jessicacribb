@@ -165,6 +165,10 @@ input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; 
 
 
 /*BLOG*/
+.blog article {padding-left:20px;}
+.blog article .entry-title {font-family:'Apple Chancery'; margin-bottom:5px;}
+.blog article .entry-meta {border-bottom:1px solid #e7bdcf; margin-bottom:10px;}
+.blog article footer.entry-meta {border-bottom:3px double #8f6354; margin-bottom:25px; padding-bottom:10px; padding-top:10px; margin-top:20px;}
 .single-post article, #nav-single {padding-left:25px;}
 article a, .nav-previous a, .nav-next a {color:#8F6354;}
 article a:hover, .nav-previous a:hover, .nav-next a:hover {color:#f2a6c7;}
