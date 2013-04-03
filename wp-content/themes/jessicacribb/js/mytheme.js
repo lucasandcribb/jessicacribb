@@ -27,11 +27,11 @@ $(document).ready(function() {
 			$('.gallery-title-left .left-content').html(currentGallery);
 			$('.gallery-title-left').fadeIn();
 			$('.gallery-title-center').fadeIn();
-			if (rightGallery == "Hair") {
+			if (leftGallery == "Hair") {
 				$('#hair-gallery').fadeIn();
-			} else if (rightGallery == "Makeup") {
+			} else if (leftGallery == "Makeup") {
 				$('#makeup-gallery').fadeIn();
-			} else if (rightGallery == "Before &amp; After") {
+			} else if (leftGallery == "Before &amp; After") {
 				$('#banda-gallery').fadeIn();
 			}
 		} else if ($(this).hasClass('gallery-title-right')) {
