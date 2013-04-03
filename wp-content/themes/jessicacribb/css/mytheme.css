@@ -190,7 +190,7 @@ article a:hover, .nav-previous a:hover, .nav-next a:hover {color:#f2a6c7;}
     float:left; font-size:12px; margin-top:0px; padding:5px; }
 .widget-area #searchform #searchsubmit {width:100px; height:20px; border:1px solid #faebf2; background:#8f6354; color:#faebf2; font-size:14px; 
 	font-family:'Chaparral Pro'; margin-top:5px;}
-.archive .entry-content #searchform .assistive-text {display:none;}
+.entry-content #searchform .assistive-text {display:none;}
 
 
 
