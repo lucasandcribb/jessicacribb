@@ -33,7 +33,8 @@ get_header(); ?>
 <div id="share-loyalty-overly" class="share-overlay">
 	<div class="overlay-title">Share Loyalty Card</div>
 	<img class="close" src="/wp-content/themes/jessicacribb/images/x.jpg" />
-	<?php echo do_shortcode('[contact-form-7 id="91" title="Share Loyalty Card"]'); ?>
+	<?php echo do_shortcode('[contact-form-7 id="91" title="Share Loyalty Card"]');?>
+	<?php echo $cf7->id; ?>
 </div>
 
 <div id="share-referral-overly" class="share-overlay">

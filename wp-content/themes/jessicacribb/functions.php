@@ -682,3 +682,11 @@ function diww_favicon() {
 }
 add_action('wp_head', 'diww_favicon');
 add_action('admin_head', 'diww_favicon');
+
+
+add_filter( 'wpcf7_mail_components', 'mycustom_wpcf7_mail_components' );
+function mycustom_wpcf7_mail_components( $components ) {
+	$components['attachments'][] = 'wp-content/documents/Loyalty_Card.pdf';
+	return $components;
+}
+

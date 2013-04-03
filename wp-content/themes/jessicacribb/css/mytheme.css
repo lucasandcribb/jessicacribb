@@ -102,6 +102,7 @@ input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; 
 	margin-top:65px;}
 #banda-gallery, #makeup-gallery {display:none;}
 #hair-gallery {display:block;}
+.cycloneslider-slide {width:100% !important;}
 #gallery .cycloneslider {position:relative; float:left; margin-left:22px; margin-top:22px;}
 #gallery .cycloneslider .cycloneslider-prev, #gallery .cycloneslider .cycloneslider-prev {display:block; opacity:0.8;}
 .gallery-nav {cursor:pointer;}
@@ -161,7 +162,8 @@ input[type=text] {border:1px solid #e7bdcf; background:#faebf2; font-size:14px; 
 	font-size:14px; color:#8f6354 !important; font-family:"Lucida Grande";}
 .share-overlay input.wpcf7-submit {width:150px; height:30px; border:1px solid #faebf2; background:#8f6354; color:#faebf2; font-size:22px; 
 	font-family:'Chaparral Pro';cursor:pointer; margin-top:20px; float:right;}
-.share-overlay .wpcf7-mail-sent-ok {border:none;}
+.share-overlay .wpcf7-mail-sent-ok {border:none; margin-top:-15px; margin-left:0px; width:300px;}
+.share-overlay .failed div.wpcf7-mail-sent-ng {border:1px solid #8F6354; background:#f2a6c7; margin-top:-15px; width:300px; margin-left:0px;}
 
 
 /*BLOG*/
