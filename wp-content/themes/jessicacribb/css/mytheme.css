@@ -25,13 +25,13 @@ p {margin:0;}
 #header #nav li a {font:normal 20px 'Apple Chancery'; color:#000; float:left; height:90px; min-width:75px; padding:0 15px 0 13px; text-align:center;}
 
 /*TIP CONTAINER*/
-#tip-cont {float:left; width:180px; padding:15px; border:1px solid #e7bdcf; margin:25px 0 10px 20px;}
+#tip-cont {float:left; width:180px; padding:15px; border:1px solid #e7bdcf; margin:25px 0 100px 20px;}
 #tip-cont .title {float:left; background:url(../images/loyalty-pattern.png) no-repeat 11px 45px; background-size:150px; font-size:25px; color:#8f6354; width:100%; text-align:center; margin-bottom:15px; height:65px;}
 #tip-cont .tip-title {float:left; width:100%; text-align:center; padding:5px 0 2px; background:#fcf3f7; margin-bottom:15px; font-size:20px;}
 #tip-cont .tip-text {float:left; font-size:14px; margin-bottom:10px;}
 
 /*FOOTER*/
-#footer {float:left; width:730px; height:30px; border:solid 1px #e7bdcf; background:#fcf5f8; margin:50px 0 0 45px; padding:10px;}
+#footer {float:left; width:730px; height:30px; border:solid 1px #e7bdcf; background:#fcf5f8; margin:50px 0 50px 45px; padding:10px;}
 #footer #signup-cont {z-index:4;display:none; background:#f2d9e4; border:1px solid #8f6354; height:21px; padding:2px 5px 5px 5px; width:547px; position:absolute; margin-left:171px;}
 #footer #newsletter {z-index:5; float:left; color:#8f6354; font-size:22px; border:1px solid #8f6354; width:155px; height:21px; padding:2px 5px 5px 10px; background:url(../images/arrow.png) no-repeat 155px 7px #f2d9e4; cursor:pointer;}
 #footer #newsletter.click {background:url(../images/arrow-left.png) no-repeat 155px 7px #f2d9e4;}
@@ -57,9 +57,9 @@ p {margin:0;}
 #home .salon-address {float:left; width:660px; text-align:center; margin:60px 0 0 75px;}
 
 /*BIO*/
-#bio #photo {float:left; width:345px; height:345px; margin:25px 40px 0 35px; background:url(../images/bio-frame.png) no-repeat;}
-#bio #photo img {float:left; margin:22px 0 0 22px;}
-#bio #bio-text {float:left; width:375px; margin-top:25px;}
+#bio #photo {width:500px; height:345px; margin:auto; background:url(../images/bio-frame.png) no-repeat;}
+#bio #photo img {float:left; margin:23px 0 0 24px;}
+#bio #bio-text {width:525px; margin:auto; margin-top:25px; text-align:center;}
 #bio #bio-text p {margin-bottom:20px;}
 
 /*SERVICES*/
