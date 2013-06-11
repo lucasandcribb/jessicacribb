@@ -50,7 +50,7 @@ get_header(); ?>
 			<div class="credits-title">Credits</div>
 			<?php $loop = new WP_Query( array( 'post_type' => 'credits', 'order' => 'ASC' ) ); ?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<div class="credit-title credit-website"><?php the_title(); ?> - <?php the_field('website'); ?></div>
+				<div class="credit-title credit-website"><?php the_title(); ?>  <?php the_field('website'); ?></div>
 			<?php endwhile; ?>
 		</div>
 	</div>

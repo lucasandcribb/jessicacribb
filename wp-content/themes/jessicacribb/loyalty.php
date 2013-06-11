@@ -8,7 +8,7 @@ get_header(); ?>
 	<div class="lr-title">Loyalty Program</div>
 	<div class="lr-cont">
 		<div class="lr-content">
-			Take this card with you to your next appointment and get it stamped. Once your get 5 stampsu will then get 25% off your next service.
+			Take this card with you to your next appointment and get it stamped. Once you get 5 stamps you will then get 25% off your next service.
 		</div>
 		<div class="lr-links">
 			<a href="/wp-content/documents/Loyalty_Card.pdf" target="_blank"><div class="print-card card">Print Loyalty Card</div></a>
